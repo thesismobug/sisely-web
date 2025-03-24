@@ -21,7 +21,7 @@ export default function Navbar() {
           <Link href="/">
             <div className="relative w-10 h-10 mr-4">
               <Image 
-                src="/SisSpiral.png" 
+                src="SisSpiral.png" 
                 alt="Sisely Logo" 
                 fill
                 style={{ objectFit: 'contain' }}

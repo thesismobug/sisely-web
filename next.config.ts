@@ -6,6 +6,8 @@ const nextConfig: NextConfig = {
   },
   output: 'export',
   distDir: 'docs',
+  basePath: '/sisely-web',
+  assetPrefix: '/sisely-web',
 };
 
 export default nextConfig;
