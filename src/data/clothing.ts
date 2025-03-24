@@ -1,28 +1,59 @@
-type ClothingItem = {
+type Clothing = {
   id: number;
-  src: string;
-  alt: string;
+  title: string;
+  images: string[];
+  description: string[];
 };
 
-export const clothingItems: ClothingItem[] = [
+// Create a function to generate the correct image path
+const getImagePath = (path: string): string => `/sisely-web/${path}`;
+
+export const clothingItems: Clothing[] = [
   {
     id: 1,
-    src: 'images/clothing/clothing1.png',
-    alt: 'Two models walking on a red carpet runway wearing colorful and patterned clothing designs',
+    title: 'Crochet Skirt',
+    images: [
+      getImagePath('images/clothing/skirt1.png'),
+      getImagePath('images/clothing/skirt2.png'),
+      getImagePath('images/clothing/skirt3.png'),
+    ],
+    description: [
+      'Orange crocheted circle midi skirt.',
+      'Wool blend yarn with an elastic waistband.',
+    ],
   },
   {
     id: 2,
-    src: 'images/clothing/clothing2.png',
-    alt: 'Models on a dark runway showcasing detailed clothing designs with light accents',
+    title: 'Geometric Ring Top',
+    images: [
+      getImagePath('images/clothing/shirt1.png'),
+      getImagePath('images/clothing/shirt2.png'),
+      getImagePath('images/clothing/shirt3.png'),
+    ],
+    description: [
+      'White cotton top with open back.',
+      'Geometric ring pattern.',
+      'Adjustable ribbon ties.',
+    ],
   },
   {
     id: 3,
-    src: 'images/clothing/clothing3.png',
-    alt: 'Model walking down a red carpet runway showcasing a vibrant patterned outfit',
+    title: 'Runway Piece 1',
+    images: [
+      getImagePath('images/clothing/clothing3.png'),
+    ],
+    description: [
+      'Vibrant patterned outfit showcased on the runway.',
+    ],
   },
   {
     id: 4,
-    src: 'images/clothing/clothing4.png',
-    alt: 'Model in formal attire walking down a red carpet runway in an elegant venue',
+    title: 'Formal Attire',
+    images: [
+      getImagePath('images/clothing/clothing4.png'),
+    ],
+    description: [
+      'Elegant formal attire designed for special occasions.',
+    ],
   }
 ]; 
