@@ -1,5 +1,8 @@
 'use client';
 
+import React from 'react';
+import Image from 'next/image';
+
 type MetalworkImage = {
   id: number;
   src: string;
@@ -31,10 +34,14 @@ export default function MetalworkGrid({ groups }: MetalworkGridProps) {
             {group.images.map((image) => (
               <div key={image.id} className="flex flex-col">
                 <div className="relative aspect-square bg-black p-2 rounded shadow-[0_4px_8px_rgba(0,0,0,0.2)]">
-                  <img
+                  <Image
                     src={image.src}
                     alt={image.alt}
-                    className="object-contain w-full h-full hover:scale-[1.02] transition-transform duration-300"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    style={{ objectFit: 'contain' }}
+                    priority
+                    className="hover:scale-[1.02] transition-transform duration-300"
                   />
                 </div>
               </div>
