@@ -10,9 +10,6 @@ type MetalworkGroup = {
   images: MetalworkImage[];
 };
 
-// First, let's rename the images to use simpler names
-const getImagePath = (num: number): string => `/images/metalwork/metal${num}.png`;
-
 export const metalworkGroups: MetalworkGroup[] = [
   {
     id: 1,
