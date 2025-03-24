@@ -7,7 +7,10 @@ type Painting = {
 };
 
 // Create a function to generate the correct image path
-const getImagePath = (path: string): string => `/sisely-web/${path}`;
+const getImagePath = (path: string): string => {
+  const basePath = process.env.NODE_ENV === 'development' ? '' : '/sisely-web';
+  return `${basePath}/${path}`;
+};
 
 export const paintings: Painting[] = [
   {

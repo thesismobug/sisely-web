@@ -31,10 +31,6 @@ export default function ClothingGrid({ items }: ClothingGridProps) {
                 className="hover:scale-[1.02] transition-transform duration-300"
               />
             </div>
-            <h3 className="mt-3 font-semibold">{item.title}</h3>
-            {item.description.map((desc, index) => (
-              <p key={index} className="text-sm text-gray-600">{desc}</p>
-            ))}
           </div>
         ))}
       </div>
