@@ -5,9 +5,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: 'export',
-  basePath: '/sisely-web',
-  assetPrefix: '/sisely-web/',
-  trailingSlash: true,
+  distDir: 'docs',
 };
 
 export default nextConfig;
